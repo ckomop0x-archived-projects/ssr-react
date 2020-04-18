@@ -25,7 +25,6 @@ SessionsPage.getInitialProps = async () => {
     const data = await axios.get(process.env.RESTURL_SESSIONS);
     response.sessionsData = data.data;
   } catch (e) {
-    // console.log(e)
     response.message = e.message;
     response.hasErrored = true;
   }

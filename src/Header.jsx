@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../public/SVCClogo.png';
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
         </div>
         <div className="col-12 col-sm-8 text-lg-right">
           <div>
-            <img src="/SVCClogo.png" alt="Silicon Valley Code Camp 2020"/>
+            <img src={logo} alt="Silicon Valley Code Camp 2020"/>
           </div>
           <h2>Silicon Valley Code Camp 2020</h2>
         </div>

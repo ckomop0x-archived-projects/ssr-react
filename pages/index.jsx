@@ -2,8 +2,6 @@ import React from "react";
 import styles from "../css/site.module.css";
 
 const IndexPage = (props) => {
-  console.log(props)
-
   return (
     <div>
       <div className="container">
