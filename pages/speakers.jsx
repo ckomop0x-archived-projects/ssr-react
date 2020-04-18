@@ -6,7 +6,7 @@ const SpeakersPage = ({ speakersData }) => (
   <div className="container">
       <div className="card-deck">
         {speakersData.map((speaker) => (
-          <SpeakerCard speaker={speaker} />
+          <SpeakerCard speaker={speaker} key={speaker.id}/>
         ))}
       </div>
   </div>
@@ -20,7 +20,7 @@ SpeakersPage.getInitialProps = async () => {
   };
 
   try {
-    const data = await axios.get("http://localhost:4000/speakers");
+    const data = await axios.get(process.env.RESTURL_SPEAKERS);
     response.speakersData = data.data;
   } catch (e) {
     response.message = e.message;

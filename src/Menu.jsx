@@ -13,14 +13,14 @@ const Menu = () => {
           </li>
           <li className="nav-item">
             <Link href="/speakers">
-              <a className="nav-link" href="#">
+              <a className="nav-link">
                 Speakers
               </a>
             </Link>
           </li>
           <li className="nav-item">
             <Link href="/sessions">
-              <a className="nav-link" href="#">
+              <a className="nav-link">
                 Sessions
               </a>
             </Link>

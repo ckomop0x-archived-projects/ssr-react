@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 import SessionsCard from "../src/SessionCard";
 
-
-const SessionsPage = ({sessionsData}) => {
+const SessionsPage = ({ sessionsData }) => {
   return (
     <div className="container">
       <div className="card-deck">
         {sessionsData.map((session) => (
-          <SessionsCard session={session} />
+          <SessionsCard session={session} key={session.id} />
         ))}
       </div>
     </div>
@@ -23,7 +22,7 @@ SessionsPage.getInitialProps = async () => {
   };
 
   try {
-    const data = await axios.get("http://localhost:4000/sessions");
+    const data = await axios.get(process.env.RESTURL_SESSIONS);
     response.sessionsData = data.data;
   } catch (e) {
     // console.log(e)
@@ -32,6 +31,6 @@ SessionsPage.getInitialProps = async () => {
   }
 
   return { ...response };
-}
+};
 
 export default SessionsPage;
