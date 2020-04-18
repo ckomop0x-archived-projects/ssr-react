@@ -8,7 +8,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "json-server": "json-server --watch db.json --port 4000 --delay 0"
+    "json-server": "json-server --watch db.json --port 4000 --delay 100"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,8 @@
     "next-compose-plugins": "^2.2.0",
     "next-images": "^1.4.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-placeholder": "^4.0.1"
   },
   "devDependencies": {
     "json-server": "^0.16.1",

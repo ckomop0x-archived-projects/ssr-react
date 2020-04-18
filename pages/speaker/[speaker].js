@@ -1,22 +1,18 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 
-const SpeakerPage = (props) => {
-  return (
-    <div className="container">
-      <div className="row">
-        <h2>
-          {props.speakerData.firstName} {props.speakerData.lastName}
-        </h2>
-        <p>
-          {props.speakerData.bio}
-        </p>
-      </div>
+const SpeakerPage = (props) => (
+  <div className="container">
+    <div className="row">
+      <h2>
+        {props.speakerData.firstName} {props.speakerData.lastName}
+      </h2>
+      <p>{props.speakerData.bio}</p>
     </div>
-  );
-};
+  </div>
+);
 
-SpeakerPage.getInitialProps = async ({query}) => {
+SpeakerPage.getInitialProps = async ({ query }) => {
   const response = {
     hasErrored: false,
     message: "",
@@ -24,7 +20,9 @@ SpeakerPage.getInitialProps = async ({query}) => {
   };
 
   try {
-    const data = await axios.get(`${process.env.RESTURL_SPEAKER}/${query.speaker}`);
+    const data = await axios.get(
+      `${process.env.RESTURL_SPEAKER}/${query.speaker}`
+    );
     response.speakerData = data.data;
   } catch (e) {
     response.message = e.message;
@@ -32,6 +30,6 @@ SpeakerPage.getInitialProps = async ({query}) => {
   }
 
   return { ...response };
-}
+};
 
-  export default SpeakerPage;
+export default SpeakerPage;

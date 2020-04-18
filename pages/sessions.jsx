@@ -2,17 +2,15 @@ import React from "react";
 import axios from "axios";
 import SessionsCard from "../src/SessionCard";
 
-const SessionsPage = ({ sessionsData }) => {
-  return (
-    <div className="container">
-      <div className="card-deck">
-        {sessionsData.map((session) => (
-          <SessionsCard session={session} key={session.id} />
-        ))}
-      </div>
+const SessionsPage = ({ sessionsData }) => (
+  <div className="container">
+    <div className="card-deck">
+      {sessionsData.map((session) => (
+        <SessionsCard session={session} key={session.id} />
+      ))}
     </div>
-  );
-};
+  </div>
+);
 
 SessionsPage.getInitialProps = async () => {
   const response = {
