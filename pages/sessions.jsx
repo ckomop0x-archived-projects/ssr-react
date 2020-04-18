@@ -1,23 +1,17 @@
 import React from 'react';
 import axios from "axios";
-import Link from "next/link";
+import SessionsCard from "../src/SessionCard";
+
 
 const SessionsPage = ({sessionsData}) => {
   return (
-    <>
-      <div>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
+    <div className="container">
+      <div className="card-deck">
+        {sessionsData.map((session) => (
+          <SessionsCard session={session} />
+        ))}
       </div>
-    <ul>
-      {sessionsData.map((session) => (
-        <li key={session.id}>
-          {session.title} {session.id}
-        </li>
-      ))}
-    </ul>
-    </>
+    </div>
   );
 };
 

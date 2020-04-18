@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/site.module.css";
 
 const BootstrapPage = () => (
   <div>
@@ -194,7 +193,7 @@ const BootstrapPage = () => (
 
     <div className="jumbotron text-center">
       <h7>
-        <b>Silicon Valley Code Camp 2018</b> is Hosted by PayPal in San Jose at
+        <b>Silicon Valley Code Camp 2020</b> is Hosted by PayPal in San Jose at
         their Town Hall location. 2121 North First Street.{" "}
         <b>October 13-14 2018</b>
       </h7>

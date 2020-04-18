@@ -1,8 +1,13 @@
 // import App from 'next/app'
 import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from "../src/Layout";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -17,4 +22,4 @@ function MyApp({ Component, pageProps }) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;
