@@ -2,8 +2,14 @@ import React from 'react'
 import DigitalClock from "../src/DigitalClock";
 
 class IndexPage extends React.Component {
+  static async getInitialProps () {
+    return ({
+      time: new Date().toISOString()
+    })
+  }
+
   state = {
-    time: new Date()
+    time: this.props.time
   }
 
   tick = () => {
