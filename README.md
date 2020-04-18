@@ -42,7 +42,9 @@ Pavel @ckomop0x Klochkov
 
 Give a ⭐️ if this project helped you!
 
-[![support us](https://img.shields.io/badge/become-a patreon%20us-orange.svg?cacheSeconds=2592000)](https://www.patreon.com/ckomop0x)
+<a href="https://www.patreon.com/ckomop0x">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
 
 
 ***
