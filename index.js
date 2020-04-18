@@ -1,7 +1,10 @@
 const rootElement = document.querySelector('#app');
-const myElement = document.createElement('h1');
 
-myElement.classList.add('orange');
-myElement.innerText = 'Hello from Netherlands'
+const myReactElement = React.createElement('h1', {
+    style: {
+      color: 'orange'
+    }
+  },
+  'Hello from Netherlands and React')
 
-rootElement.appendChild(myElement);
+ReactDOM.render(myReactElement, rootElement)
