@@ -1,4 +1,5 @@
 import React from 'react'
+import DigitalClock from "../src/DigitalClock";
 
 class IndexPage extends React.Component {
   state = {
@@ -19,8 +20,7 @@ class IndexPage extends React.Component {
 
 
   render() {
-    return <h1 style={{color: 'orange'}}>Hello from Netherlands and React {this.state.time.toString()}</h1>
-
+    return <DigitalClock time={this.state.time}/>
   }
 }
 
